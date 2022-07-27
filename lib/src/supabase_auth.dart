@@ -117,7 +117,7 @@ class SupabaseAuth with WidgetsBindingObserver {
           }
         }
       }
-      WidgetsBinding.instance?.addObserver(_instance);
+      WidgetsBinding.instance.addObserver(_instance);
       _instance._startDeeplinkObserver();
 
       if (!_instance._initialSessionCompleter.isCompleted) {
@@ -138,7 +138,7 @@ class SupabaseAuth with WidgetsBindingObserver {
     _listenerController.close();
     _authSubscription?.data?.unsubscribe();
     _stopDeeplinkObserver();
-    WidgetsBinding.instance?.removeObserver(this);
+    WidgetsBinding.instance.removeObserver(this);
   }
 
   @override
